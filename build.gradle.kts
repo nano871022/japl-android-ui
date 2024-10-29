@@ -67,6 +67,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("com.google.firebase:firebase-messaging-ktx:24.0.3")
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
