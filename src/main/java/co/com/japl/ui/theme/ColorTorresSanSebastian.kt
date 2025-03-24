@@ -33,6 +33,7 @@ val color_theme_light_on_surface = Color(0xFFFFFFFF)
 val color_theme_light_surface_container_low = Color(0xFFFFFFFF)
 val color_theme_light_surface_container_highest = Color(0xFF546E7A)
 
+
 val color_theme_light_surface_container = Color(0xFF1A237E)
 
 val color_theme_light_surface_variant = Color(0xFF95B6C5)
@@ -86,6 +87,7 @@ val LightColorTSSScheme = lightColorScheme(
     surface = color_theme_light_surface,
     surfaceContainerLow = color_theme_light_surface_container_low,
     surfaceContainerHigh = color_theme_light_surface_container_highest,
+    surfaceContainerHighest = color_theme_light_surface_container_highest,
     surfaceContainer = color_theme_light_surface_container,
     onSurface = color_theme_light_on_surface,
     surfaceVariant = color_theme_light_surface_variant,
@@ -114,6 +116,7 @@ val DarkColorTSSScheme = darkColorScheme(
     onSurface = color_theme_dark_on_surface,
     surfaceContainer = color_theme_dark_surface_container,
     surfaceContainerHigh = color_theme_dark_surface_container_highest,
+    surfaceContainerHighest = color_theme_dark_surface_container_highest,
     error = color_theme_dark_error,
     onError = color_theme_dark_on_error,
     primaryContainer = color_theme_dark_primary_container,
