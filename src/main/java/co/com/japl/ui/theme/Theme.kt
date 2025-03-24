@@ -10,10 +10,8 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
@@ -23,37 +21,8 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
-
-private val DarkColorScheme = darkColorScheme(
-    primary = white,
-    secondary = yellow_light,
-    background = black,
-    primaryContainer = yellow_light,
-    onPrimaryContainer = green,
-    onPrimary = yellow,
-    onSurface = white,
-    onSurfaceVariant = white
-
-)
-
-private val LightColorScheme = lightColorScheme(
-    primary = black,
-    secondary = green,
-    background = white,
-    primaryContainer = green,
-    onPrimaryContainer = yellow_light,
-    onSurfaceVariant = black
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
-)
+import co.com.japl.ui.BuildConfig
+import co.com.japl.ui.enums.getScheme
 
 @Composable
 fun MaterialThemeComposeUI(
@@ -68,8 +37,8 @@ fun MaterialThemeComposeUI(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> getScheme(BuildConfig.aplicationName).getDark()
+        else -> getScheme(BuildConfig.aplicationName).getLight()
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
