@@ -17,5 +17,5 @@ enum class ProjectsEnum (val lightColorScheme: ColorScheme,val darkColorScheme: 
 }
 
 fun getScheme(name:String):ProjectsEnum{
-    return ProjectsEnum.entries.first { it.name.lowercase().contains(name.lowercase()) }
+    return ProjectsEnum.entries.first { it.name.lowercase().contains(name.lowercase()) or name.lowercase().contains(it.name.lowercase())}
 }
